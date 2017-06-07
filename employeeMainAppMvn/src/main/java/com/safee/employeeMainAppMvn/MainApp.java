@@ -58,7 +58,7 @@ public class MainApp
 
 	private void displayOptions() {
 		// TODO Auto-generated method stub
-		System.out.println("1. Add Employee");
+		System.out.println("1. Find Employee");
 		
 		System.out.println("2. Exit");
 		

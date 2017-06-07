@@ -10,7 +10,7 @@ public class SalariesDao {
 	{
 		try(Connection connection= JdbcConnectionFactory.getConnection();)
 		{
-			String SQL="Select * from SALARIES WHERE emp_no=?";
+			String SQL="Select * from SALARIES WHERE emp_no=? ORDER BY from_date, to_date DESC";
 			PreparedStatement preparedStatement= connection.prepareStatement(SQL);
 			preparedStatement.setInt(1, empId);
 			ResultSet resultSet=preparedStatement.executeQuery();
