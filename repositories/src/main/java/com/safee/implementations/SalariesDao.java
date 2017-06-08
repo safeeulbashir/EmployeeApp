@@ -1,12 +1,14 @@
-package com.safee.repositories;
+package com.safee.implementations;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+import com.safee.Beans.Salaries;
+
 public class SalariesDao {
-	public static Salaries getSalaries(int empId)
+	public Salaries getSalaries(int empId)
 	{
 		try(Connection connection= JdbcConnectionFactory.getConnection();)
 		{
@@ -17,11 +19,10 @@ public class SalariesDao {
 			if(resultSet.next())
 			{
 				Salaries salaries= new Salaries();
-				salaries.setEmp_no(resultSet.getInt("emp_no"));
+				salaries.setEmployeeNo(resultSet.getInt("emp_no"));
 				salaries.setSalary(resultSet.getInt("salary"));
-				salaries.setFrom_date(resultSet.getDate("from_date"));
-				salaries.setTo_date(resultSet.getDate("to_date"));
-				
+				salaries.setFromDate(resultSet.getDate("from_date"));
+				salaries.setToDate(resultSet.getDate("to_date"));
 				return salaries;
 			}
 		} catch (SQLException e) {

@@ -1,7 +1,10 @@
-C:\SWInstallation\EclipseWorkspace\employeeAppmvn\repositories\src\main\java\com\safee\repositories\Employee.java
-C:\SWInstallation\EclipseWorkspace\employeeAppmvn\repositories\src\main\java\com\safee\repositories\JdbcConnectionFactory.java
-C:\SWInstallation\EclipseWorkspace\employeeAppmvn\repositories\src\main\java\com\safee\repositories\SalariesDao.java
-C:\SWInstallation\EclipseWorkspace\employeeAppmvn\repositories\src\main\java\com\safee\repositories\EmployeeDao.java
-C:\SWInstallation\EclipseWorkspace\employeeAppmvn\repositories\src\main\java\com\safee\repositories\Salaries.java
-C:\SWInstallation\EclipseWorkspace\employeeAppmvn\repositories\src\main\java\com\safee\repositories\DepartmentDao.java
-C:\SWInstallation\EclipseWorkspace\employeeAppmvn\repositories\src\main\java\com\safee\repositories\Department.java
+C:\SWInstallation\EclipseWorkspace\employeeAppmvn\repositories\src\main\java\com\safee\implementations\JdbcConnectionFactory.java
+C:\SWInstallation\EclipseWorkspace\employeeAppmvn\repositories\src\main\java\com\safee\Beans\Department.java
+C:\SWInstallation\EclipseWorkspace\employeeAppmvn\repositories\src\main\java\com\safee\implementations\EmployeeDao.java
+C:\SWInstallation\EclipseWorkspace\employeeAppmvn\repositories\src\main\java\Interfaces\EmployeeDaoInterface.java
+C:\SWInstallation\EclipseWorkspace\employeeAppmvn\repositories\src\main\java\com\safee\Beans\Salaries.java
+C:\SWInstallation\EclipseWorkspace\employeeAppmvn\repositories\src\main\java\com\safee\Beans\Employee.java
+C:\SWInstallation\EclipseWorkspace\employeeAppmvn\repositories\src\main\java\com\safee\implementations\DepartmentDao.java
+C:\SWInstallation\EclipseWorkspace\employeeAppmvn\repositories\src\main\java\com\safee\implementations\SalariesDao.java
+C:\SWInstallation\EclipseWorkspace\employeeAppmvn\repositories\src\main\java\Interfaces\DepartmentDaoInterface.java
+C:\SWInstallation\EclipseWorkspace\employeeAppmvn\repositories\src\main\java\Interfaces\SalaryDaoInterface.java

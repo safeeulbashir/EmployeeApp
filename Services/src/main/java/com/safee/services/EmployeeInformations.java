@@ -1,47 +1,77 @@
 package com.safee.services;
 
-import com.safee.repositories.*;
+import java.sql.Date;
 
 public class EmployeeInformations {
 
-	private Employee employee;
-	private Salaries salaries;
-	private Department department;
+      private int empNo; 
+      private String empName;
+      private Date joinDate;
+      private String deptartmentName;
+      private int salary;
+      public double calculateGrossSalary() // (basic salary + 30% basic salary)
+      {
+    	  return this.salary+0.3*this.salary;
+      }
 	/**
-	 * @return the employee
+	 * @return the salary
 	 */
-	public Employee getEmployee() {
-		return employee;
+	public int getSalary() {
+		return salary;
 	}
 	/**
-	 * @param employee the employee to set
+	 * @param salary the salary to set
 	 */
-	public void setEmployee(Employee employee) {
-		this.employee = employee;
+	public void setSalary(int salary) {
+		this.salary = salary;
 	}
 	/**
-	 * @return the salaries
+	 * @return the empNo
 	 */
-	public Salaries getSalaries() {
-		return salaries;
+	public int getEmpNo() {
+		return empNo;
 	}
 	/**
-	 * @param salaries the salaries to set
+	 * @param empNo the empNo to set
 	 */
-	public void setSalaries(Salaries salaries) {
-		this.salaries = salaries;
+	public void setEmpNo(int empNo) {
+		this.empNo = empNo;
 	}
 	/**
-	 * @return the department
+	 * @return the empName
 	 */
-	public Department getDepartment() {
-		return department;
+	public String getEmpName() {
+		return empName;
 	}
 	/**
-	 * @param department the department to set
+	 * @param empName the empName to set
 	 */
-	public void setDepartment(Department department) {
-		this.department = department;
+	public void setEmpName(String empName) {
+		this.empName = empName;
+	}
+	/**
+	 * @return the joinDate
+	 */
+	public Date getJoinDate() {
+		return joinDate;
+	}
+	/**
+	 * @param joinDate the joinDate to set
+	 */
+	public void setJoinDate(Date joinDate) {
+		this.joinDate = joinDate;
+	}
+	/**
+	 * @return the deptartmentName
+	 */
+	public String getDeptartmentName() {
+		return deptartmentName;
+	}
+	/**
+	 * @param deptartmentName the deptartmentName to set
+	 */
+	public void setDeptartmentName(String deptartmentName) {
+		this.deptartmentName = deptartmentName;
 	}
 	
 }

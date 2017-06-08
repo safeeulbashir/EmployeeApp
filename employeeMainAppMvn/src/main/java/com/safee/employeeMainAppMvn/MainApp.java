@@ -21,13 +21,15 @@ public class MainApp
     
     public void displayEmployeeDetails()
     {
+    	EmployeeServices employeeServices= new EmployeeServices();
     	System.out.println("Enter employee Id:");
     	Scanner scanner= new Scanner(System.in);
     	int ID=scanner.nextInt();
-    	EmployeeInformations employeeInformations=EmployeeServices.getEmployeeInformation(ID);
-        System.out.println("Name: "+employeeInformations.getEmployee().getFirst_name()+" "+employeeInformations.getEmployee().getLast_name());
-        System.out.println("Department: "+employeeInformations.getDepartment().getDep_name());
-        System.out.println("Salaries: "+employeeInformations.getSalaries().getSalary());
+    	EmployeeInformations employeeInformations= employeeServices.getEmployeeInformation(ID);//.getEmployeeInformation(ID);
+        System.out.println("Name: "+employeeInformations.getEmpName());
+        System.out.println("Joining Date: "+employeeInformations.getJoinDate());
+        System.out.println("Department: "+employeeInformations.getDeptartmentName());
+        System.out.println("Gross Salaries: "+employeeInformations.calculateGrossSalary());
     }
 
 	private void runProgram() {

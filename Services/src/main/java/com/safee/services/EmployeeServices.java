@@ -1,16 +1,22 @@
 package com.safee.services;
 
-import com.safee.repositories.*;
+import com.safee.implementations.*;
 
 public class EmployeeServices {
 
-	
-	public static EmployeeInformations getEmployeeInformation(int emp_no)
+	private DepartmentDao departmentDao = new DepartmentDao();
+	private EmployeeDao employeeDao = new EmployeeDao();
+	private SalariesDao salariesDao = new SalariesDao();
+
+	public EmployeeInformations getEmployeeInformation(int empID)
 	{
+		
 		EmployeeInformations employeeInformations= new EmployeeInformations();
-		employeeInformations.setEmployee(EmployeeDao.getEmployee(emp_no));
-		employeeInformations.setDepartment(DepartmentDao.getSalaries(emp_no));
-		employeeInformations.setSalaries(SalariesDao.getSalaries(emp_no));
+		employeeInformations.setEmpName(employeeDao.getEmployee(empID).getFirstName()+" "+employeeDao.getEmployee(empID).getLastName());
+		employeeInformations.setEmpNo(employeeDao.getEmployee(empID).getEmployeeNo());
+		employeeInformations.setJoinDate(employeeDao.getEmployee(empID).getHireDate());
+		employeeInformations.setDeptartmentName(departmentDao.getDepartment(empID).getDepName());
+		employeeInformations.setSalary(salariesDao.getSalaries(empID).getSalary());
 		return employeeInformations;
 	}
 }
